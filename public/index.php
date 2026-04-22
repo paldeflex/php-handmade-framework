@@ -7,9 +7,7 @@ require_once ROOT . '/vendor/autoload.php';
 require_once HELPERS . '/helpers.php';
 
 $app = new Application();
-dump($app->request);
-dump($app->request->isGet());
-dump($app->request->isPost());
-dump($app->request->isAjax());
-dump($app->request->get('page'));
-dump(request()->isGet());
+
+require_once CONFIG . '/routes.php';
+
+$app->run();
